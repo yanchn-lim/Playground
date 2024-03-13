@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-
+using System;
 namespace DataStructure.Graph
 {
     //The node class where all the information of the node is declared
-    public abstract class Node
+    [Serializable]
+    public class Node
     {
         public int Id { get; set; }
         public int Depth { get; set; }
@@ -14,9 +15,8 @@ namespace DataStructure.Graph
 
         }
 
-        public Node(int id, int depth)
+        public Node(int depth)
         {
-            Id = id;
             Depth = depth;
         }
     }

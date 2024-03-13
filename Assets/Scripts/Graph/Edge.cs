@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DataStructure.Graph
 {
-    public abstract class Edge<N> where N : Node
+    public class Edge<N> where N : Node
     {
         public int Id { get; set; }
         public N SourceNode { get; set; }

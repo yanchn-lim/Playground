@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DataStructure.Graph
 {
-    public abstract class Graph<N> where N : Node
+    public class Graph<N> where N : Node
     {
         //node id, connected nodes
         //public Dictionary<int, HashSet<N>> AdjacencyList = new();
@@ -32,6 +32,7 @@ namespace DataStructure.Graph
         public void AddNode(N node)
         {
             // this method adds the node to the node list, adjacency list and edge list;
+            node.Id = NodeIdCounter;
             NodeDictionary[node.Id] = node;
             NodeIdCounter++;
             NodeCount = NodeDictionary.Count;
